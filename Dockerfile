@@ -1,13 +1,6 @@
 FROM centos:7
 
-RUN yum install -y which git gcc-c++ make curl wget bzip2
-# Install Java
-RUN wget --no-cookies --no-check-certificate --header \
- "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
- "http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.rpm"
-
-RUN yum localinstall -y jdk-*-linux-x64.rpm
-RUN rm ./jdk-*-linux-x64.rpm
+RUN yum install -y which git curl wget bzip2
 
 # Install Node
 RUN   \
